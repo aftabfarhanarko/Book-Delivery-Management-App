@@ -6,15 +6,24 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
 
-import banner1 from "../../assets/bannerimg/banner1.jpg";
-import banner4 from "../../assets/bannerimg/banner4.jpg";
-import banner2 from "../../assets/bannerimg/banner3.jpg";
 import TextType from "../../utils/TextType";
+
+import bnner1 from "/newfullbanner.jpg";
+import bnner2 from "/public/newfullbanner2.jpg";
+import bnner3 from "/public/newbanner3.jpg";
+import bnner4 from "/public/bannernew4.jpg";
+import { Link } from "react-router";
+import { GiBookmarklet, GiSpellBook } from "react-icons/gi";
+import { GiBookPile } from "react-icons/gi";
+import { GiBookAura } from "react-icons/gi";
+
+
+
 
 const Banner = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-900 ">
-      <div className="bg-gray-200 ">
+    <div className=" ">
+      <div className=" ">
         <Swiper
           loop={true}
           autoplay={{
@@ -30,170 +39,163 @@ const Banner = () => {
         >
           {/* Slide 1 */}
           <SwiperSlide>
-            <div className="flex flex-col-reverse px-5 md:px-15 md:flex-row items-center justify-between  mx-auto  py-16 gap-12 ">
-              {/* Text Section */}
-              <div className="md:w-1/2 space-y-8">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-md">
+            <div
+              className="relative flex flex-col items-center justify-center text-center px-5 md:px-15 py-16 gap-6 mx-auto h-[700px] bg-center bg-cover"
+              style={{ backgroundImage: `url(${bnner1})` }}
+            >
+              {/* Overlay: full div with black bg and opacity */}
+              <div className="absolute inset-0 bg-black/40"></div>
+
+              {/* Content - make sure this is above the overlay */}
+              <div className="relative z-10  ">
+                <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-md m-w-[660px] md:w-[660px]">
                   <TextType
-                    text={"Create Dynamic Banners With Elegant Animations"}
-                    typingSpeed={70}
-                    deletingSpeed={40}
+                    text={
+                      "📘 Buy Authentic Library Books At A Student-Friendly Low Price"
+                    }
+                    typingSpeed={90}
+                    deletingSpeed={80}
                     pauseDuration={2000}
                     loop={true}
-                    showCursor={true}
+                    showCursor={false}
                     cursorCharacter="|"
                   />
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 max-w-lg font-medium leading-relaxed">
-                  <TextType
-                    text={`Build beautifully animated hero sections effortlessly using React Swiper`}
-                    typingSpeed={70}
-                    deletingSpeed={40}
-                    pauseDuration={2000}
-                    loop={true}
-                    showCursor={true}
-                    cursorCharacter="|"
-                  />
-                </p>
 
-                <button className="px-12 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl">
-                  Discover More →
-                </button>
-              </div>
+                <div>
+                  <p className=" text-lg mx-auto md:text-xl my-4 text-white max-w-lg font-medium leading-relaxed">
+                    Get original books directly from libraries with trusted
+                    quality assurance.
+                  </p>
 
-              {/* Image Section */}
-              <div className="md:w-1/2 flex justify-center">
-                <img
-                  src={banner4}
-                  alt="Banner"
-                  className="w-[350px] md:w-[450px] rounded-3xl shadow-2xl transform transition-transform duration-700 hover:scale-105"
-                />
+                  <Link
+                    to="/books"
+                    className="px-12 max-w-[300px] mx-auto flex items-center gap-3 p-2.5 mt-4 md:py-2.5 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl "
+                  >
+                    Shop Library Books <GiBookmarklet className=" w-4 h-4 animate-bounce"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="flex flex-col-reverse px-5 md:px-15 md:flex-row items-center justify-between  mx-auto py-16 gap-12 ">
-              {/* Text Section */}
-              <div className="md:w-1/2 space-y-8">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-md">
+            <div
+              className="relative flex flex-col items-center justify-center text-center px-5 md:px-15 py-16 gap-6 mx-auto h-[700px] bg-center bg-cover"
+              style={{ backgroundImage: `url(${bnner2})` }}
+            >
+              {/* Overlay: full div with black bg and opacity */}
+              <div className="absolute inset-0 bg-black/40"></div>
+
+              {/* Content - make sure this is above the overlay */}
+              <div className="relative z-10  ">
+                <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-md m-w-[660px] md:w-[660px]">
                   <TextType
-                    text={"Create Dynamic Banners With Elegant Animations"}
-                    typingSpeed={70}
-                    deletingSpeed={40}
+                    text={
+                      "📚 Discover Rare Library Collections Available For Purchase Online"
+                    }
+                    typingSpeed={90}
+                    deletingSpeed={80}
                     pauseDuration={2000}
                     loop={true}
-                    showCursor={true}
+                    showCursor={false}
                     cursorCharacter="|"
                   />
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 max-w-lg font-medium leading-relaxed">
-                  <TextType
-                    text={`Build beautifully animated hero sections effortlessly using React Swiper`}
-                    typingSpeed={70}
-                    deletingSpeed={40}
-                    pauseDuration={2000}
-                    loop={true}
-                    showCursor={true}
-                    cursorCharacter="|"
-                  />
-                </p>
 
-                <button className="px-12 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl">
-                  Discover More →
-                </button>
-              </div>
+                <div>
+                  <p className=" text-lg mx-auto md:text-xl my-4 text-white max-w-lg font-medium leading-relaxed">
+                  Find unique, limited, and archived books delivered securely to you.
+                  </p>
 
-              {/* Image Section */}
-              <div className="md:w-1/2 flex justify-center">
-                <img
-                  src={banner4}
-                  alt="Banner"
-                  className="w-[350px] md:w-[450px] rounded-3xl shadow-2xl transform transition-transform duration-700 hover:scale-105"
-                />
+                  <Link
+                    to="/books"
+                    className="px-12 p-2.5 mt-4 max-w-[300px] mx-auto flex items-center gap-3 md:py-2.5 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl"
+                  >
+
+                    Explore Rare Books <GiSpellBook  className=" w-4 h-4 animate-bounce"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="flex flex-col-reverse px-5 md:px-15 md:flex-row items-center justify-between  mx-auto  py-16 gap-12 ">
-              {/* Text Section */}
-              <div className="md:w-1/2 space-y-8">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-md">
+            <div
+              className="relative flex flex-col items-center justify-center text-center px-5 md:px-15 py-16 gap-6 mx-auto h-[700px] bg-center bg-cover"
+              style={{ backgroundImage: `url(${bnner3})` }}
+            >
+              {/* Overlay: full div with black bg and opacity */}
+              <div className="absolute inset-0 bg-black/40"></div>
+
+              {/* Content - make sure this is above the overlay */}
+              <div className="relative z-10  ">
+                <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-md m-w-[660px] md:w-[660px]">
                   <TextType
-                    text={"Create Dynamic Banners With Elegant Animations"}
-                    typingSpeed={70}
-                    deletingSpeed={40}
+                    text={
+                      "📖 Order Your Favorite Library Books With Fast Home Delivery"
+                    }
+                    typingSpeed={90}
+                    deletingSpeed={80}
                     pauseDuration={2000}
                     loop={true}
-                    showCursor={true}
+                    showCursor={false}
                     cursorCharacter="|"
                   />
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 max-w-lg font-medium leading-relaxed">
-                  <TextType
-                    text={`Build beautifully animated hero sections effortlessly using React Swiper`}
-                    typingSpeed={70}
-                    deletingSpeed={40}
-                    pauseDuration={2000}
-                    loop={true}
-                    showCursor={true}
-                    cursorCharacter="|"
-                  />
-                </p>
 
-                <button className="px-12 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl">
-                  Discover More →
-                </button>
-              </div>
+                <div>
+                  <p className=" text-lg mx-auto md:text-xl my-4 text-white max-w-lg font-medium leading-relaxed">
+                    Enjoy quick book delivery services from your nearest partnered libraries.
+                  </p>
 
-              {/* Image Section */}
-              <div className="md:w-1/2 flex justify-center">
-                <img
-                  src={banner2}
-                  alt="Banner"
-                  className="w-[350px] md:w-[450px] rounded-3xl shadow-2xl transform transition-transform duration-700 hover:scale-105"
-                />
+                  <Link
+                    to="/books"
+                    className="px-12 p-2.5 max-w-[300px] mx-auto flex items-center gap-3 mt-4 md:py-2.5 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl"
+                  >
+                  Order Books Now  <GiBookPile  className=" w-4 h-4 animate-bounce"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="flex flex-col-reverse px-5 md:px-15 md:flex-row items-center justify-between  mx-auto  py-16 gap-12 ">
-              {/* Text Section */}
-              <div className="md:w-1/2 space-y-8">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-md">
+            <div
+              className="relative flex flex-col items-center justify-center text-center px-5 md:px-15 py-16 gap-6 mx-auto h-[700px] bg-center bg-cover"
+              style={{ backgroundImage: `url(${bnner4})` }}
+            >
+              {/* Overlay: full div with black bg and opacity */}
+              <div className="absolute inset-0 bg-black/40"></div>
+
+              {/* Content - make sure this is above the overlay */}
+              <div className="relative z-10  ">
+                <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-md m-w-[660px] md:w-[660px]">
                   <TextType
-                    text={"Create Dynamic Banners With Elegant Animations"}
-                    typingSpeed={70}
-                    deletingSpeed={40}
+                    text={
+                      "📕 Get Newly Published Library Books At Exclusive Discount Offers"
+                    }
+                    typingSpeed={90}
+                    deletingSpeed={80}
                     pauseDuration={2000}
                     loop={true}
-                    showCursor={true}
+                    showCursor={false}
                     cursorCharacter="|"
                   />
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 max-w-lg font-medium leading-relaxed">
-                  <TextType
-                    text={`Build beautifully animated hero sections effortlessly using React Swiper`}
-                    typingSpeed={70}
-                    deletingSpeed={40}
-                    pauseDuration={2000}
-                    loop={true}
-                    showCursor={true}
-                    cursorCharacter="|"
-                  />
-                </p>
 
-                <button className="px-12 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl">
-                  Discover More →
-                </button>
-              </div>
+                <div>
+                  <p className=" text-lg mx-auto md:text-xl my-4 text-white max-w-lg font-medium leading-relaxed">
+                  Save more on trending academic and story books every day
+                  </p>
 
-              {/* Image Section */}
-              <div className="md:w-1/2 flex justify-center">
-                <img
-                  src={banner1}
-                  alt="Banner"
-                  className="w-[350px] md:w-[450px] rounded-3xl shadow-2xl transform transition-transform duration-700 hover:scale-105"
-                />
+                  <Link
+                    to="/books"
+                    className="px-12 p-2.5 mt-4 max-w-[300px] mx-auto flex items-center gap-3 md:py-2.5 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg text-white font-semibold text-lg tracking-wide transition-transform transform hover:scale-105 hover:shadow-xl"
+                  >
+                 View Discount   <GiBookAura  className=" w-4 h-4 animate-bounce"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>

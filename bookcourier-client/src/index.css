@@ -9,18 +9,27 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-    themes: light --default;
+  themes: light --default, dark --prefersdark;
 }
 
 ;
+
+a.active {
+    @apply text-primary
+}
+
 
 @plugin "daisyui/theme" {
     name: "light";
     default: true;
     --color-primary: #C2410C;
     --color-newa: #FACC15;
-    --color-secondary: #C2410C ;
+    --color-secondary: #C2410C;
     --color-mytext: #6B7280;
     --color-thried: #FFF7ED;
-   
+     
+}
+
+.button{
+  @apply  bg-gradient-to-br from-orange-400 to-orange-600
 }

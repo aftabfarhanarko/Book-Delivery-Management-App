@@ -32,14 +32,12 @@ const BookFeatureSection = () => {
         w-full
         rounded-2xl
         backdrop-blur-xl 
-        bg-white/20 
-        border border-white/30
         relative z-10 overflow-hidden
       "
           >
             {/* Tilt Hover + Scroll Reveal Image */}
             <motion.img
-              src="/public/banner2.jpg"
+              src="/newfullbanner2.jpg"
               alt="main"
               className="
    h-[300px] md:h-[400px] 
