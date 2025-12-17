@@ -6,9 +6,9 @@ A modern, full‑stack MERN application that allows users to request book pickup
 
 ## 🚀 Live URLs
 
-* **Client:** `YOUR_CLIENT_LINK_HERE`
-* **Server:** `YOUR_SERVER_LINK_HERE`
-* **Firebase Console:** `YOUR_FIREBASE_CONSOLE_LINK`
+* **Live Link:** https://bookcourier-8c360.web.app/
+* **Client:** (https://github.com/aftabfarhanarko/BookCourier-Client)
+* **Server:** (https://github.com/aftabfarhanarko/BookCourier-Server)
 
 ---
 
@@ -93,8 +93,8 @@ This project is designed following modern UI/UX principles, production‑level s
 
 ### **Hosting**
 
-* Client: Netlify / Vercel
-* Server: Vercel / Render
+* Client: Vercel
+* Server: Vercel
 * Database: MongoDB Atlas
 
 ---
@@ -183,15 +183,6 @@ All Books page includes:
 
 ---
 
-## ❤️ Additional Features
-
-* Skeleton loaders
-* Dark/Light theme toggle
-* Fully responsive for mobile, tablet, desktop
-* Consistent modern UI
-* Meaningful commit history: **20+ client commits & 12+ server commits**
-
----
 
 ## 🧳 Deployment Checklist
 

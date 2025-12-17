@@ -67,7 +67,7 @@ const DetlicesPages = () => {
     };
 
     axioscehore.post("ordernow", orderInfo).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       if (res.data.insertedId) {
         toast.success("Order Successfully ");
         setIsOpen(false);
@@ -93,7 +93,7 @@ const DetlicesPages = () => {
         reviewerRating: Number(reating),
         reviewDate: new Date().toISOString(),
       };
-      console.log(setReviewDataBase);
+      // console.log(setReviewDataBase);
       axioscehore.post("reviewUserNow", setReviewDataBase).then((res) => {
         refetch();
         // console.log(res.data);
@@ -669,7 +669,7 @@ const DetlicesPages = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
             {relatedBooks.map((item, idx) => (
               <motion.div
                 key={item._id}
@@ -924,6 +924,7 @@ const DetlicesPages = () => {
                 Order Now
               </button>
             </form>
+            
           </div>
         </div>
       )}

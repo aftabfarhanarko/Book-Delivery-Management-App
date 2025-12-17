@@ -30,11 +30,11 @@ const ManazeBooks = () => {
       return res.data.result || [];
     },
   });
-  console.log(data);
+  // console.log(data);
   
 
   const handelDeletNow = (items) => {
-    console.log(items);
+    // console.log(items);
     Swal.fire({
       title: `Confirm Delete ${items?.title} This Book`,
       text: `Are you sure you want to delete this book ? This action cannot be undone.`,
@@ -51,7 +51,7 @@ const ManazeBooks = () => {
         confirmButton:
           "bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-xl",
         cancelButton:
-          "bg-red-500 ml-4 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-xl",
+          "bg-gradient-to-br from-orange-400 to-orange-600 text-white hover:opacity-90 font-semibold px-6 py-2 rounded-xl",
       },
 
       buttonsStyling: false,
@@ -86,23 +86,23 @@ const ManazeBooks = () => {
   };
 
   const handelALlStatuse = async (publisher, id) => {
-    console.log(publisher, id);
+    // console.log(publisher, id);
     const res = await axioscehore.patch(`updeatAdminAcrions/${id}`, {
       publisher: publisher,
     });
     toast.success(`Succes Publisher Statuse in ${publisher}`);
     refetch();
-    console.log(res.data);
+    // console.log(res.data);
   };
 
   const handelpublish = (id) => {
     handelALlStatuse("Publish", id);
-    console.log("This is Publish Button", id);
+    // console.log("This is Publish Button", id);
   };
   const handelUnpublish = (id) => {
     handelALlStatuse("UnPublish", id);
 
-    console.log("This is UnPublish Button", id);
+    // console.log("This is UnPublish Button", id);
   };
 
   if (isFetching || isLoading) return <LoadingSpinner />;
