@@ -11,6 +11,8 @@ import {
   Search,
   ChevronDown,
   Heart,
+  Info,
+  Globe,
 } from "lucide-react";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { GiSpellBook } from "react-icons/gi";
@@ -27,6 +29,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosSchore from "../../hooks/useAxiosSchore";
 import LoadingSpinner from "../../shared/LoadingSpinner ";
 import { IoIosLogOut } from "react-icons/io";
+import { IoArrowBackOutline } from "react-icons/io5";
 
 export default function Navbar() {
   const { user, userLogOut } = useAuth();
@@ -79,12 +82,11 @@ export default function Navbar() {
     },
   });
 
-
   return (
     <nav
       className={`${bgPrimary} border-b ${borderColor} shadow-sm transition-colors duration-300 sticky top-0 z-50    fixed `}
     >
-      <div className=" w-11/12 mx-auto py-0.5 px-4 sm:px-6 lg:px-8">
+      <div className=" w-11/12 mx-auto py-0.5  md:px-0 px-3  ">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
@@ -109,6 +111,20 @@ export default function Navbar() {
             >
               <GiSpellBook className="w-5 h-5" />
               <span className="font-medium">All Books</span>
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg ${textSecondary} ${hoverBg} hover:text-orange-500 transition-all duration-200`}
+            >
+              <Info className="w-5 h-5" />
+              <span className="font-medium">About</span>
+            </NavLink>
+            <NavLink
+              to="/coverage"
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg ${textSecondary} ${hoverBg} hover:text-orange-500 transition-all duration-200`}
+            >
+              <Globe className="w-5 h-5" />
+              <span className="font-medium">Coverage</span>
             </NavLink>
             <NavLink
               to="/deshbord"
@@ -315,6 +331,21 @@ export default function Navbar() {
                 <Home className="w-5 h-5" />
                 <span className="font-medium">Home</span>
               </NavLink>
+              <NavLink
+                to="/about"
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg ${textSecondary} ${hoverBg} hover:text-orange-500 transition-all duration-200`}
+              >
+                <Info className="w-5 h-5" />
+                <span className="font-medium">About</span>
+              </NavLink>
+              <NavLink
+                to="/coverage"
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg ${textSecondary} ${hoverBg} hover:text-orange-500 transition-all duration-200`}
+              >
+                <Globe className="w-5 h-5" />
+                <span className="font-medium">Coverage</span>
+              </NavLink>
+
               <NavLink
                 to="/books"
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg ${textSecondary} ${hoverBg} hover:text-orange-500 transition-all duration-200`}
